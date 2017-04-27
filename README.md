@@ -2,7 +2,7 @@
 
 # DAGGER 2.11-rc1 SAMPLE
 
-### 🗡 Dagger 2.11
+### 🗡 Dagger 2.11-rc1
 
 Dagger2.10で[`dagger.android`モジュールがリリース](https://google.github.io/dagger/android)されました.  
 本稿ではDagger2.10と2.11でリリースされた`dagger.android`モジュールの使い方について簡単に紹介したいと思います.  
@@ -121,8 +121,6 @@ public interface MainComponent extends AndroidInjector<MainActivity> {
 MainComponentには`AndroidInjector`インタフェースを継承させます.   
 `AndroidInjector`はAndroidのコアコンポーネント（Activity, Fragment, Service, BroadcastReceiver, ContentProvider）に依存性を注入するメソッド`inject(T)`を定義したインタフェースです.  
 
-このインタフェースは■■■
-
 次にMainModuleを定義します.  
 
 ```
@@ -142,6 +140,8 @@ public abstract class MainModule {
 }
 ```
 
+`@ActivityKey`でのMainActivity.class指定は, 後ほど説明する適切な`AndroidInjector.Builder`を選択するための型情報に必要なものです.  
+Androidの各コアコンポーネント専用のInjectorを生成するファクトリをここで指定します. `AndroidInjector`については後ほど説明します.  
 
 続いてアプリケーションクラス用のAppModule.
 
@@ -155,7 +155,7 @@ public class AppModule {
 }
 ```
 
-続いてAppComponent
+そしてAppComponent.
 
 ```java
 package com.yuki312.androiddaggersample;
@@ -317,3 +317,6 @@ DaggerApplicationクラスを覗くとこの辺りをどう解決しているの
 この他にも, コアコンポーネントのComponent/Module定義を簡略化できる`@ContributesAndroidInjector`や, コアコンポーネントインスタンスをパラメータにとるProviderメソッドの提供方法などもありますが, 本稿では割愛します.  
 
 ひとまず, `dagger.android`パッケージがどのようなものになる予定なのか, 本稿で大まかにでも掴めたようでしたら幸いです.  
+rcがとれて, Dagger2.11が正式リリースされたタイミングで俯瞰図なども描きたいと思います.  
+
+以上です.  
