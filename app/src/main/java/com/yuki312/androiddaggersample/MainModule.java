@@ -7,9 +7,6 @@ import dagger.android.ActivityKey;
 import dagger.android.AndroidInjector;
 import dagger.multibindings.IntoMap;
 
-/**
- * Created by YukiMatsumura on 2017/04/27.
- */
 @Module
 public abstract class MainModule {
 
