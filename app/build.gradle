@@ -39,4 +39,9 @@ dependencies {
 
   // Require if use android support libs.
   compile 'com.google.dagger:dagger-android-support:2.11-rc1'
+
+  // Architecture components
+  compile "android.arch.lifecycle:runtime:1.0.0-alpha1"
+  compile "android.arch.lifecycle:extensions:1.0.0-alpha1"
+  annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha1"
 }

@@ -15,6 +15,11 @@ buildscript {
 allprojects {
   repositories {
     jcenter()
+
+    // FOR ARCHITECTURE COMPONENTS
+    //  Caution: Architecture Components are still in alpha. Expect breaking changes before the 1.0 release.
+    //  https://developer.android.com/topic/libraries/architecture/adding-components.html
+    maven { url 'https://maven.google.com' }
   }
 }
 
