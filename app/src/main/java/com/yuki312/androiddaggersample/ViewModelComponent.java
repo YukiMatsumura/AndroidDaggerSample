@@ -2,7 +2,6 @@ package com.yuki312.androiddaggersample;
 
 import dagger.Subcomponent;
 
-@ViewModelScope
 @Subcomponent
 public interface ViewModelComponent {
 
