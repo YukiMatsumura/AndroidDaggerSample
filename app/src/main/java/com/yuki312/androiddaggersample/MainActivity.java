@@ -13,11 +13,11 @@ public class MainActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     AndroidInjection.inject(this);
-
     super.onCreate(savedInstanceState);
-    MyViewModel vm = ViewModelProviders.of(this, vmFactory).get(MyViewModel.class);
-    setContentView(R.layout.activity_main);
 
+    MyViewModel vm = ViewModelProviders.of(this, vmFactory).get(MyViewModel.class);
     android.util.Log.d("TEST", "ViewModel instance hash=" + vm.hashCode());
+
+    setContentView(R.layout.activity_main);
   }
 }
