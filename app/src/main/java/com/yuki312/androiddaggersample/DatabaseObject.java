@@ -7,5 +7,7 @@ import javax.inject.Singleton;
 public class DatabaseObject {
 
   @Inject
-  public DatabaseObject() {}
+  public DatabaseObject() {
+    android.util.Log.d("TEST", "Init DatabaseObject hash=" + hashCode());
+  }
 }

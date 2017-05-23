@@ -16,15 +16,7 @@ public class ViewModelFactory implements ViewModelProvider.Factory {
   @Inject
   public ViewModelFactory(final ViewModelComponent viewModelComponent) {
     creators = new ArrayMap<>();
-    // we cannot inject view models directly because they won't be bound to the owner's
-    // view model scope.
-    creators.put(MyViewModel.class,
-        // TODO: replace lambda code.
-        new Callable<ViewModel>() {
-          @Override public ViewModel call() throws Exception {
-            return viewModelComponent.myViewModel();
-          }
-        });
+    creators.put(MyViewModel.class, viewModelComponent::myViewModel);
   }
 
   @Override public <T extends ViewModel> T create(Class<T> modelClass) {
