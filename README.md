@@ -288,7 +288,7 @@ ActivityやFragmentといったコアコンポーネントのインジェクタ�
 
 #### ContentProviderInjectorとApplicationInjector
 
-Androidの仕組み上, アプリケーションプロセスがCygoteからforkされて開始される際, ContentProviderの初期化はApplicationの初期化より早いです.  
+Androidの仕組み上, アプリケーションプロセスがZygoteからforkされて開始される際, ContentProviderの初期化はApplicationの初期化より早いです.  
 つまり, ActivityやBroadcastReceiver, Serviceなど他のコアコンポーネントと唯一異なってContentProviderのonCreate時にはまだApplicationクラスが初期化（onCreate）されていない可能性があります.  
 DaggerApplicationクラスを覗くとこの辺りをどう解決しているのかをうかがい知ることができます.  
 
