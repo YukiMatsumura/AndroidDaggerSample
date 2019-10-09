@@ -1,6 +1,6 @@
 package com.yuki312.androiddaggersample;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 import javax.inject.Inject;
 
 public class MyViewModel extends ViewModel {

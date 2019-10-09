@@ -1,8 +1,8 @@
 package com.yuki312.androiddaggersample;
 
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
-import android.support.v4.util.ArrayMap;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.collection.ArrayMap;
 import java.util.Map;
 import java.util.concurrent.Callable;
 import javax.inject.Inject;

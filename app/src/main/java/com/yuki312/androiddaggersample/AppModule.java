@@ -1,6 +1,6 @@
 package com.yuki312.androiddaggersample;
 
-import android.arch.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProvider;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
